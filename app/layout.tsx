@@ -12,6 +12,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Way Gibb - Delivered Reliably | Premium Food & Building Materials",
   description: "High-quality meat, poultry, and construction materials delivered directly to you with instant delivery or scheduled pre-orders.",
+  icons: {
+    icon: "/images/waygibb-logo.png",
+  },
 };
 
 export default function RootLayout({
