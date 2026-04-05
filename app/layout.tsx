@@ -14,6 +14,29 @@ export const metadata: Metadata = {
   description: "High-quality meat, poultry, and construction materials delivered directly to you with instant delivery or scheduled pre-orders.",
   icons: {
     icon: "/images/waygibb-logo.png",
+    apple: "/images/waygibb-logo.png",
+  },
+  openGraph: {
+    title: "Way Gibb - Built for Logistics & Delivery",
+    description: "High-quality meat, poultry, and construction materials delivered directly.",
+    url: "https://waygibb-web.vercel.app",
+    siteName: "Way Gibb",
+    images: [
+      {
+        url: "/images/waygibb-logo.png",
+        width: 800,
+        height: 600,
+        alt: "Way Gibb Branding Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Way Gibb - Delivered Reliably",
+    description: "Premium Food & Building Materials Delivery System",
+    images: ["/images/waygibb-logo.png"],
   },
 };
 
