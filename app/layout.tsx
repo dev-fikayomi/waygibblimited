@@ -20,11 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-full flex-col overflow-x-hidden">
+    <html lang="en" suppressHydrationWarning className={`${poppins.variable} antialiased`}>
+      <body className="antialiased min-h-screen flex flex-col">
         <AosProvider>{children}</AosProvider>
       </body>
     </html>
