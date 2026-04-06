@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins } from "next/font/google";
 import AosProvider from "@/components/providers/AosProvider";
 import "./globals.css";
@@ -49,6 +50,25 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${poppins.variable} antialiased`}>
       <body className="antialiased min-h-screen flex flex-col">
         <AosProvider>{children}</AosProvider>
+        
+        {/* Tawk.to Live Chat Script */}
+        <Script
+          id="tawk-to"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/69d41fb1b137951c367ffa9c/1jli9nkb5';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );
