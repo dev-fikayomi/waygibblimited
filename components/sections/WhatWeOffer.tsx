@@ -12,7 +12,7 @@ const products = [
     category: "Dependable delivery",
     title: "Building Materials",
     label: "Construction Materials",
-    image: "/images/building-materials.png",
+    image: "/images/materials-supply.png",
     link: "#",
   },
   {
