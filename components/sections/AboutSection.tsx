@@ -83,7 +83,7 @@ export default function AboutSection() {
           <div className="relative w-full max-w-[min(100%,480px)] overflow-visible sm:max-w-[min(100%,520px)] md:max-w-[min(100%,560px)] lg:mr-6 lg:max-w-[min(100%,600px)] xl:max-w-[min(100%,640px)]">
             <div className="relative h-[260px] w-full overflow-hidden rounded-2xl shadow-lg sm:h-[300px] md:h-[340px] lg:h-[370px] xl:h-[390px]">
               <Image
-                src="/images/steps.png"
+                src="/images/wmission.png"
                 alt="Fresh produce display"
                 fill
                 className="object-cover object-right"

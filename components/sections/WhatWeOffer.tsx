@@ -19,7 +19,7 @@ const products = [
     category: "Quality for every participant",
     title: "Meat Sharing (Controlled Bulk System)",
     label: "Controlled Bulk System",
-    image: "/images/meat-sharing.png",
+    image: "/images/Group 8.png",
     link: "#",
   },
 ];

@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative flex min-h-[85svh] w-full min-w-0 max-w-full items-center overflow-hidden">
       <div className="absolute inset-0 z-0 min-w-0">
         <Image
-          src="/images/image 3 1.png"
+          src="/images/hero.png"
           alt="Way Gibb Industrial Hero"
           fill
           priority
@@ -16,29 +16,36 @@ export default function Hero() {
 
       <div className="container relative z-10 mx-auto flex w-full min-w-0 max-w-full items-center px-4 py-16 sm:py-20 lg:py-24 sm:px-6 md:px-8">
         <div className="relative w-full min-w-0 max-w-3xl translate-y-4 sm:translate-x-4 sm:translate-y-8 md:translate-x-10 lg:translate-x-20">
-          <div className="absolute -inset-x-2 -inset-y-6 -z-10 rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-none sm:-inset-x-8 sm:-inset-y-8 sm:rounded-[2rem] md:-inset-x-16 md:-inset-y-12 lg:-inset-x-24 md:rounded-[3rem]" />
+          <div className="absolute -inset-x-4 -inset-y-6 -z-10 rounded-2xl border border-white/20 bg-white/20 backdrop-blur-[6px] shadow-xl sm:-inset-x-8 sm:-inset-y-8 sm:rounded-[2rem] md:-inset-x-16 md:-inset-y-12 lg:-inset-x-20 md:rounded-[3rem]" />
 
-          <div className="text-white">
-            <span
-              className="mb-3 inline-block text-[10px] font-bold uppercase tracking-[0.15em] text-white drop-shadow-md sm:mb-4 sm:text-xs sm:tracking-[0.2em]"
-              data-aos="fade-down"
-              data-aos-duration="700"
-              data-aos-delay="100"
-            >
-              DELIVERED RELIABLY
-            </span>
-            <h1
-              className="mb-5 max-w-full break-words font-sans text-3xl font-extrabold leading-[1.1] tracking-tight text-white drop-shadow-lg sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl"
-              data-aos="fade-up"
-              data-aos-duration="800"
-              data-aos-delay="200"
-            >
-              Premium Food &{" "}
-              <br className="hidden sm:inline" />
-              Building Materials
-            </h1>
+          <div className="text-primary">
+            <div className="inline-block max-w-full">
+              <div
+                className="mb-3 flex w-full justify-between text-[10px] font-bold uppercase text-primary sm:mb-4 sm:text-xs"
+                data-aos="fade-down"
+                data-aos-duration="700"
+                data-aos-delay="100"
+                aria-label="DELIVERED RELIABLY"
+              >
+                {"DELIVERED RELIABLY".split("").map((char, index) => (
+                  <span key={index} aria-hidden="true" className={char === " " ? "w-2 sm:w-3 md:w-4" : ""}>
+                    {char}
+                  </span>
+                ))}
+              </div>
+              <h1
+                className="mb-5 max-w-full break-words font-sans text-3xl font-extrabold leading-[1.1] tracking-tight text-primary sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="200"
+              >
+                Premium Food &{" "}
+                <br className="hidden sm:inline" />
+                Building Materials
+              </h1>
+            </div>
             <p
-              className="mb-6 max-w-sm text-sm font-bold leading-relaxed text-primary sm:mb-8 sm:max-w-md sm:text-base md:text-lg"
+              className="mb-6 max-w-sm text-sm font-medium leading-relaxed text-primary/90 sm:mb-8 sm:max-w-lg sm:text-base md:text-lg"
               data-aos="fade-up"
               data-aos-duration="750"
               data-aos-delay="320"
@@ -49,13 +56,13 @@ export default function Hero() {
             </p>
 
             <p
-              className="mb-8 max-w-xs text-xs font-semibold italic leading-relaxed text-primary/80 sm:mb-12 sm:max-w-sm sm:text-sm"
+              className="mb-8 max-w-xs text-xs font-semibold italic leading-relaxed text-primary sm:mb-12 sm:max-w-md sm:text-sm"
               data-aos="fade-up"
               data-aos-duration="750"
               data-aos-delay="420"
             >
-              We don&apos;t connect you to suppliers we supply you directly and
-              deliver to your doorstep.
+              We don&apos;t connect you to suppliers we supply you. directly and
+              deliver to your doorstep
             </p>
 
             <div

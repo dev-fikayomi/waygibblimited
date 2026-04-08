@@ -10,16 +10,16 @@ export default function AppShowcase() {
     >
       <div className="flex min-h-0 flex-col lg:min-h-[400px] lg:flex-row lg:items-stretch">
         <div
-          className="relative flex w-full items-center justify-center bg-neutral-100 px-4 py-8 sm:px-8 sm:py-10 lg:w-1/2 lg:justify-end lg:py-12 lg:pl-10 lg:pr-2 xl:pl-12 xl:pr-3"
+          className="relative flex w-full items-center justify-center bg-neutral-100 px-4 py-8 sm:px-8 sm:py-10 lg:w-1/2 lg:justify-end lg:py-12 lg:pl-4 lg:pr-0 xl:pl-6"
           data-aos="fade-right"
           data-aos-duration="850"
         >
-          <div className="relative h-[200px] w-full max-w-md sm:h-[280px] md:h-[350px] lg:h-[min(450px,60vh)] lg:max-w-none">
+          <div className="relative h-[250px] w-full max-w-md translate-y-4 sm:h-[340px] md:h-[420px] md:translate-y-6 lg:h-[min(550px,70vh)] lg:max-w-none lg:translate-y-7 translate-x-14">
             <Image
-              src="/images/download.png"
+              src="/images/wygibb.png"
               alt="Way Gibb app on mobile phones"
               fill
-              className="object-contain object-center"
+              className="object-contain object-right scale-125 lg:origin-right"
               sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
               priority={false}
             />
@@ -48,11 +48,11 @@ export default function AppShowcase() {
             </span>
           </div>
 
-          <p className="mt-6 max-w-md text-sm font-medium leading-relaxed text-primary/80 sm:mt-7 sm:text-base md:text-lg lg:mt-9 lg:pl-5 xl:pl-6">
+          <p className="mt-1 max-w-md text-sm font-medium leading-relaxed text-primary/80 sm:mt-2 sm:text-base md:text-lg lg:mt-3">
             Download the WAYGIBB APP for faster ordering.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:pl-5 xl:pl-6">
+          <div className="mt-3 flex flex-col gap-3 sm:mt-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:mt-5">
             <Link
               href="#"
               className="transition-opacity hover:opacity-90 active:opacity-80"
@@ -87,7 +87,7 @@ export default function AppShowcase() {
                 </svg>
                 <div>
                   <div className="text-[9px] font-bold uppercase leading-none opacity-70 sm:text-[10px]">
-                    GET IT ON
+                    GET IT ON 
                   </div>
                   <div className="text-base font-bold leading-tight sm:text-lg">Google Play</div>
                 </div>

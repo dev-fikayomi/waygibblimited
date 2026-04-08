@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const HERO_IMAGE = "/images/about-waygibb.jpg";
 const SERVICE_IMAGE = "/images/how-we-service.png";
-const PLACEHOLDER_1 = "/images/order-placement.png";
+const PLACEHOLDER_1 = "/images/order.png";
 const PLACEHOLDER_2 = "/images/order-scheduling.png";
-const PLACEHOLDER_3 = "/images/processing_packaging.png"; // Processing & Packaging
-const PLACEHOLDER_4 = "/images/about-waygibb.jpg"; // Delivery
+const PLACEHOLDER_3 = "/images/controlled.png  "; // Processing & Packaging
+const PLACEHOLDER_4 = "/images/delivery.png"; // Delivery
 
 export default function WhatWeDoContent() {
   return (

@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const HERO_IMAGE = "/images/about-waygibb.jpg";
 const FRESH_MEAT_IMAGE = "/images/freshhhhh.png";
-const MEAT_SHARING_IMAGE = "/images/meatttt.png";
+const MEAT_SHARING_IMAGE = "/images/image 13@2x.png";
 const BUILDING_MATERIALS_IMAGE = "/images/materials.png";
-const ELECTRONICS_IMAGE = "/images/electronics.png";
+const ELECTRONICS_IMAGE = "/images/generator.png";
 
 const PRODUCTS = [
   { name: "Cement", subtitle: "100% Quality", image: "/images/cement.png" },
@@ -366,12 +366,12 @@ export default function WhatWeSellContent() {
                 data-aos="fade-up"
                 data-aos-duration="800"
               >
-                <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded-2xl bg-white p-4 lg:min-h-full">
+                <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded-2xl lg:min-h-full">
                   <Image
                     src={ELECTRONICS_IMAGE}
                     alt="Everyday tech - electronics and accessories"
                     fill
-                    className="object-contain"
+                    className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
