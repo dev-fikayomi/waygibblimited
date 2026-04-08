@@ -10,17 +10,17 @@ export default function AppShowcase() {
     >
       <div className="flex min-h-0 flex-col lg:min-h-[400px] lg:flex-row lg:items-stretch">
         <div
-          className="relative flex w-full items-center justify-center bg-neutral-100 px-4 py-8 sm:px-8 sm:py-10 lg:w-1/2 lg:justify-end lg:py-12 lg:pl-4 lg:pr-0 xl:pl-6"
+          className="relative flex w-full items-center justify-center bg-neutral-100 pt-0 pb-0 overflow-hidden sm:px-8 sm:py-10 lg:w-1/2 lg:justify-end lg:py-12 lg:pl-4 lg:pr-0 xl:pl-6"
           data-aos="fade-right"
           data-aos-duration="850"
         >
-          <div className="relative h-[250px] w-full max-w-md translate-y-4 sm:h-[340px] md:h-[420px] md:translate-y-6 lg:h-[min(550px,70vh)] lg:max-w-none lg:translate-y-7 translate-x-14">
+          <div className="relative h-[300px] w-full translate-y-0 sm:h-[340px] sm:max-w-md sm:translate-y-4 md:h-[420px] md:translate-y-6 lg:h-[min(550px,70vh)] lg:max-w-none lg:translate-x-14 lg:translate-y-7">
             <Image
               src="/images/wygibb.png"
               alt="Way Gibb app on mobile phones"
               fill
-              className="object-contain object-right scale-125 lg:origin-right"
-              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 50vw"
+              className="object-cover object-[center_top] sm:object-contain sm:object-right lg:scale-125 lg:origin-right"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 50vw"
               priority={false}
             />
           </div>
