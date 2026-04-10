@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
@@ -6,21 +7,21 @@ const products = [
     title: "Fresh Meat",
     label: "Quality standards.",
     image: "/images/fresh-meat.png",
-    link: "#",
+    link: "/what-we-sell#fresh-meat-heading",
   },
   {
     category: "Dependable delivery",
     title: "Building Materials",
     label: "Construction Materials",
     image: "/images/materials-supply.png",
-    link: "#",
+    link: "/what-we-sell#building-materials-heading",
   },
   {
     category: "Quality for every participant",
     title: "Meat Sharing (Controlled Bulk System)",
     label: "Controlled Bulk System",
     image: "/images/Group 8.png",
-    link: "#",
+    link: "/what-we-sell#meat-sharing-heading",
   },
 ];
 
@@ -76,9 +77,9 @@ export default function WhatWeOffer() {
                 <h3 className="text-xl font-extrabold mb-3 tracking-tight sm:text-2xl md:text-3xl sm:mb-5">
                   {product.title}
                 </h3>
-                <button className="bg-primary text-white px-5 py-2 rounded-full font-bold text-xs transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-black/20 sm:px-8 sm:py-2.5 sm:text-sm">
+                <Link href={product.link} className="inline-block bg-primary text-white px-5 py-2 rounded-full font-bold text-xs transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-black/20 sm:px-8 sm:py-2.5 sm:text-sm text-center">
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           ))}
@@ -114,9 +115,9 @@ export default function WhatWeOffer() {
               <h3 className="text-2xl font-extrabold mb-4 tracking-tight sm:text-3xl md:text-4xl sm:mb-8">
                 {products[2].title}
               </h3>
-              <button className="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-black/20 sm:px-10 sm:py-3 sm:text-base">
+              <Link href={products[2].link} className="inline-block bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-black/20 sm:px-10 sm:py-3 sm:text-base text-center">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

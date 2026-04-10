@@ -66,12 +66,23 @@ function ArrowCircle() {
 
 export default function ContactSection() {
   const [tab, setTab] = useState<Tab>("contact");
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     queueMicrotask(() => AOS.refresh());
   }, [tab]);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    if (form) form.reset();
+    setShowModal(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 4000);
+  };
 
   return (
     <section id="contact" className="bg-neutral-100 pb-10 pt-8 sm:pb-14 sm:pt-10 md:pb-16 md:pt-12 lg:pb-20">
@@ -169,7 +180,7 @@ export default function ContactSection() {
             <div className="mt-10 lg:col-span-3 lg:mt-0">
               <form
                 className="rounded-xl bg-[#252830] p-4 sm:rounded-2xl sm:p-6 md:p-8"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
               >
                 <div className="space-y-4">
                   <label className="sr-only" htmlFor="contact-name">
@@ -239,6 +250,29 @@ export default function ContactSection() {
                 </li>
               ))}
             </ul>
+          </div>
+        )}
+        {/* Success Modal */}
+        {showModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm transition-opacity">
+            <div className="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full shadow-2xl flex flex-col items-center text-center animate-in fade-in zoom-in duration-200">
+              <div className="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-4">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold text-neutral-900 mb-2">Message Sent!</h4>
+              <p className="text-neutral-600 text-sm mb-6">
+                Thank you for reaching out. We will get back to you shortly.
+              </p>
+              <button
+                onClick={() => setShowModal(false)}
+                className="w-full py-3 bg-neutral-900 text-white rounded-xl font-semibold hover:bg-neutral-800 transition-colors"
+                type="button"
+              >
+                Close
+              </button>
+            </div>
           </div>
         )}
       </div>

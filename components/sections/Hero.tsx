@@ -1,6 +1,12 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import PreOrderModal from "../modals/PreOrderModal";
 
 export default function Hero() {
+  const [isPreOrderOpen, setIsPreOrderOpen] = useState(false);
+
   return (
     <section className="relative flex min-h-[85svh] w-full min-w-0 max-w-full items-center overflow-hidden">
       <div className="absolute inset-0 z-0 min-w-0">
@@ -73,13 +79,14 @@ export default function Hero() {
             >
               <button
                 type="button"
-                className="w-full rounded-xl bg-white px-8 py-3 text-sm font-bold text-[#E53935] shadow-xl shadow-white/10 transition-all hover:bg-zinc-100 active:scale-95 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base"
+                className="w-full rounded-xl bg-white px-8 py-3 text-sm font-bold text-[#E53935] shadow-xl shadow-white/10 transition-all hover:bg-zinc-100 active:scale-95 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base cursor-pointer"
               >
                 Order via App
               </button>
               <button
                 type="button"
-                className="w-full rounded-xl border border-white/10 bg-[#1E1A4B] px-8 py-3 text-sm font-bold text-white shadow-xl shadow-[#1E1A4B]/20 transition-all hover:bg-[#1E1A4B]/90 active:scale-95 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base"
+                onClick={() => setIsPreOrderOpen(true)}
+                className="w-full rounded-xl border border-white/10 bg-[#1E1A4B] px-8 py-3 text-sm font-bold text-white shadow-xl shadow-[#1E1A4B]/20 transition-all hover:bg-[#1E1A4B]/90 active:scale-95 sm:w-auto sm:px-10 sm:py-3.5 sm:text-base cursor-pointer"
               >
                 Schedule a Pre-Order
               </button>
@@ -87,6 +94,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+      <PreOrderModal isOpen={isPreOrderOpen} onClose={() => setIsPreOrderOpen(false)} />
     </section>
   );
 }
