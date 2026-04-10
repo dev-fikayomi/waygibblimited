@@ -42,11 +42,16 @@ export default function DatePicker({ id, required, className, onChange }: DatePi
     return new Date(year, month, 1).getDay();
   };
 
+  const todayDate = new Date();
+  todayDate.setHours(0, 0, 0, 0);
+
   const currentYear = currentMonth.getFullYear();
   const currentMonthIndex = currentMonth.getMonth();
 
   const daysInMonth = getDaysInMonth(currentMonthIndex, currentYear);
   const firstDay = getFirstDayOfMonth(currentMonthIndex, currentYear);
+
+  const isPrevMonthDisabled = currentYear < todayDate.getFullYear() || (currentYear === todayDate.getFullYear() && currentMonthIndex <= todayDate.getMonth());
 
   const prevMonth = () => {
     setCurrentMonth(new Date(currentYear, currentMonthIndex - 1, 1));
@@ -98,7 +103,8 @@ export default function DatePicker({ id, required, className, onChange }: DatePi
             <button
               type="button"
               onClick={prevMonth}
-              className="p-1.5 rounded-full hover:bg-neutral-100 transition-colors text-neutral-600"
+              disabled={isPrevMonthDisabled}
+              className={`p-1.5 rounded-full transition-colors ${isPrevMonthDisabled ? 'text-neutral-300 cursor-not-allowed' : 'hover:bg-neutral-100 text-neutral-600'}`}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -132,16 +138,20 @@ export default function DatePicker({ id, required, className, onChange }: DatePi
             ))}
             {Array.from({ length: daysInMonth }).map((_, i) => {
               const day = i + 1;
+              const dateObj = new Date(currentYear, currentMonthIndex, day);
+              const isPast = dateObj < todayDate;
               const isSelected = selectedDate?.getDate() === day && selectedDate?.getMonth() === currentMonthIndex && selectedDate?.getFullYear() === currentYear;
-              const isToday = new Date().getDate() === day && new Date().getMonth() === currentMonthIndex && new Date().getFullYear() === currentYear;
+              const isToday = todayDate.getDate() === day && todayDate.getMonth() === currentMonthIndex && todayDate.getFullYear() === currentYear;
               
               return (
                 <button
                   key={day}
                   type="button"
-                  onClick={() => handleSelectDate(day)}
+                  onClick={() => !isPast && handleSelectDate(day)}
+                  disabled={isPast}
                   className={`h-9 w-9 sm:h-10 sm:w-10 rounded-full text-sm font-medium transition-colors flex items-center justify-center mx-auto
-                    ${isSelected ? "bg-primary text-white shadow-md shadow-primary/20" : 
+                    ${isPast ? "text-neutral-300 cursor-not-allowed" : 
+                      isSelected ? "bg-primary text-white shadow-md shadow-primary/20" : 
                       isToday ? "bg-primary/10 text-primary hover:bg-primary/20" : 
                       "text-neutral-700 hover:bg-neutral-100"}`}
                 >
