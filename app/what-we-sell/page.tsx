@@ -8,7 +8,7 @@ import WhatWeSellContent from "@/components/sections/WhatWeSellContent";
 export const metadata: Metadata = {
   title: "What We Sell | Way Gibb",
   description:
-    "Premium frozen foods, fresh meat, and meat sharing & bulk purchase programmes—delivered with the same sourcing and logistics standards as Way Gibb.",
+    "Premium fresh foods, fresh meat, and meat sharing & bulk purchase programmes—delivered with the same sourcing and logistics standards as Way Gibb.",
 };
 
 export default function WhatWeSellPage() {

@@ -79,25 +79,25 @@ export default function WhatWeSellContent() {
                     FRESH MEAT
                   </h2>
                   <p className="mt-2 text-base font-medium text-neutral-700 sm:text-lg">
-                    Premium Frozen Foods, Preserved to Perfection
+                    Premium Fresh Foods, Preserved to Perfection
                   </p>
                 </div>
 
                 <div className="flex-1 rounded-2xl border border-zinc-200 p-6 sm:p-8">
                   <h3 className="mb-4 text-base font-bold text-neutral-900 sm:text-lg">
-                    Premium Frozen Foods, Preserved to Perfection
+                    Premium Fresh Foods, Preserved to Perfection
                   </h3>
                   
                   <div className="space-y-4 text-[15px] leading-relaxed text-neutral-800">
                     <p>
-                      Our frozen food products are carefully selected, hygienically processed, and preserved under controlled conditions to maintain freshness, taste, and nutritional value.
+                      Our fresh food products are carefully selected, hygienically processed, and preserved under controlled conditions to maintain freshness, taste, and nutritional value.
                     </p>
                     <p>
-                      From storage to delivery, every step is managed to ensure your products arrive in excellent condition. High-quality frozen chicken and turkey, hygienically processed and preserved under strict temperature control — delivered fresh and ready when you need them. Our frozen food products are carefully selected, hygienically processed, and preserved under controlled conditions to maintain freshness, taste, and nutritional value.
+                      From storage to delivery, every step is managed to ensure your products arrive in excellent condition. High-quality frozen chicken and turkey, hygienically processed and preserved under strict temperature control — delivered fresh and ready when you need them. Our fresh food products are carefully selected, hygienically processed, and preserved under controlled conditions to maintain freshness, taste, and nutritional value.
                     </p>
                     
                     <div className="pt-2 text-neutral-900">
-                      <p className="mb-3 font-bold tracking-widest text-xs sm:text-sm uppercase">WHAT SETS OUR FROZEN FOODS APART</p>
+                      <p className="mb-3 font-bold tracking-widest text-xs sm:text-sm uppercase">WHAT SETS OUR FRESH FOODS APART</p>
                       <ul className="list-none space-y-2.5 text-neutral-800">
                         <li>Proper cold-chain handling from processing to delivery</li>
                         <li>Hygienic packaging and storage</li>
