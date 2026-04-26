@@ -3,19 +3,23 @@
 import Image from "next/image";
 
 const HERO_IMAGE = "/images/about-waygibb.jpg";
-const FRESH_MEAT_IMAGE = "/images/freshhhhh.png";
+const FRESH_MEAT_IMAGE = "/images/fres.png";
 const MEAT_SHARING_IMAGE = "/images/image 13@2x.png";
-const BUILDING_MATERIALS_IMAGE = "/images/materials.png";
+const BUILDING_MATERIALS_IMAGE = "/images/img.png";
 const ELECTRONICS_IMAGE = "/images/generator.png";
 
 const PRODUCTS = [
   { name: "Cement", subtitle: "100% Quality", image: "/images/cement.png" },
   { name: "Frozen Fish", subtitle: "In different sizes", image: "/images/forzen-fish.png" },
   { name: "Frozen Chicken", subtitle: "100%", image: "/images/frozen-chicken.png" },
+  { name: "Cattle", subtitle: "Premium Quality", image: "/images/cattle.png" },
+  { name: "Chicken", subtitle: "Fresh & Healthy", image: "/images/chicken.png" },
+  { name: "Goats", subtitle: "Farm Fresh", image: "/images/goats.png" },
   { name: "Electric Blender", subtitle: "Good Quality", image: "/images/electric blender.png" },
   { name: "Head Phones", subtitle: "Great Quality", image: "/images/head-phones.png" },
-  { name: "Rods", subtitle: "Great Quality", image: "/images/rods.png" }
+  { name: "Rods", subtitle: "Great Quality", image: "/images/rodsss.png" }
 ];
+
 
 export default function WhatWeSellContent() {
   return (
@@ -112,7 +116,7 @@ export default function WhatWeSellContent() {
               <div
                 className="order-2 flex min-w-0 flex-col"
               >
-                <div className="relative h-full min-h-[300px] w-full overflow-hidden rounded-2xl lg:min-h-[400px]">
+                <div className="relative h-full min-h-[380px] w-full overflow-hidden rounded-2xl lg:min-h-[520px]">
                   <Image
                     src={FRESH_MEAT_IMAGE}
                     alt="Way Gibb staff with fresh meat, poultry, and delivery logistics"

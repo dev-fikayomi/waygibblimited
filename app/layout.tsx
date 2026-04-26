@@ -50,8 +50,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${poppins.variable} antialiased`}>
       <body className="antialiased min-h-screen flex flex-col">
         <AosProvider>{children}</AosProvider>
-        
-        {/* Tawk.to Live Chat Script */}
+       
         <Script
           id="tawk-to"
           strategy="lazyOnload"
