@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     description: "Premium Food & Building Materials Delivery System",
     images: ["/images/waygibb-logo.png"],
   },
+  verification: {
+    google: "lS4GFKEwSupkh-EWhv3Jcj7g0dyH1W9eEtOvLZMoA5o",
+  },
 };
 
 export default function RootLayout({
